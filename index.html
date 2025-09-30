@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- <link rel="stylesheet" href="styles.css"> -->
+
+<body>
+    <!--  Menu  -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <i class="fa-brands fa-instagram"></i>
+            <a class="navbar-brand" href="#">Instagram</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" p-1>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                            data-bs-target="#newPostModal">
+                            Create a New Post
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--  navbar  -->
+    <div class="nav justify-content-center border-0 my-4" id="viewTabs" role="tablist">
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab" aria-controls="home" aria-selected="true">
+                    <i class="fa-solid fa-grip-vertical"></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                    role="tab" aria-controls="profile" aria-selected="false">
+                    <i class="fa-solid fa-square"></i></button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="container">
+            <div class="row g-1">
+                <div class="col-4" style="padding: 3px;">
+                    <img src="instagram foto feed/ballenas.jpg" class="img-cuadrada" alt="ballenas">
+                </div>
+                <div class="col-4" style="padding: 3px;">
+                    <img src="instagram foto feed/casa-montaña.jpg" class="img-cuadrada" alt="casa-montaña">
+                </div>
+                <div class="col-4" style="padding: 3px;">
+                    <img src="instagram foto feed/edificio-colapsado.jpg" class="img-cuadrada" alt="edificio-colapsado">
+                </div>
+            </div>
+            <div class="row g-1">
+                <div class="col-4" style="padding: 3px;">
+                    <img src="instagram foto feed/focas.jpg" class="img-cuadrada" alt="focas">
+                </div>
+                <div class="col-4" style="padding: 3px;">
+                    <img src="instagram foto feed/fogata-playa.jpg" class="img-cuadrada" alt="fogata-playa">
+                </div>
+                <div class="col-4" style="padding: 3px;">
+                    <img src="instagram foto feed/iguana.jpg" class="img-cuadrada" alt="iguana">
+                </div>
+            </div>
+            <div class="row g-1">
+                <div class="col-4" style="padding: 3px;">
+                    <img src="instagram foto feed/paisaje-lago.jpg" class="img-cuadrada" alt="paisaje-lago">
+                </div>
+                <div class="col-4" style="padding: 3px;">
+                    <img src="instagram foto feed/sol y sombra.jpg" class="img-cuadrada" alt="sol y sombra">
+                </div>
+                <div class="col-4" style="padding: 3px;">
+                    <img src="instagram foto feed/volcan-calbuco.jpg" class="img-cuadrada" alt="volcan-calbuco">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Ballenas</h5>
+                            <small class="text-muted">08/26</small>
+                        </div>
+
+                        <img src="instagram foto feed/ballenas.jpg" class="card-img-top w-100" alt="ballenas">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">204 likes</h6>
+                            <p class="card-text text-secondary">
+                                Una ballena nadando con su cria recién nacida.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Casa de montaña</h5>
+                            <small class="text-muted">10/18</small>
+                        </div>
+
+                        <img src="instagram foto feed/casa-montaña.jpg" class="card-img-top w-100" alt="casa-montaña">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">181 likes</h6>
+                            <p class="card-text text-secondary">
+                                Espectacular lugar para pasar el finde en la montaña!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Edificio Colapsado</h5>
+                            <small class="text-muted">08/26</small>
+                        </div>
+
+                        <img src="instagram foto feed/edificio-colapsado.jpg" class="card-img-top w-100"
+                            alt="edificio-colapsado">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">1509 likes</h6>
+                            <p class="card-text text-secondary">
+                                Durante el terremoto de 8.8 grados Richter que sacudió la región de Mule y Bio Bio, en
+                                la
+                                ciduad de Concepción, el edificio
+                                Alto Rio, colapso por el movimiento de la tierra dejando a 8 personas fallecidas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Focas</h5>
+                            <small class="text-muted">10/19</small>
+                        </div>
+
+                        <img src="instagram foto feed/focas.jpg" class="card-img-top w-100" alt="familia de focas">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">181 likes</h6>
+                            <p class="card-text text-secondary">
+                                Durante el paseo del fin de semana me encontré este pequeño grupo de focas que pedían
+                                algo
+                                para desayunar...
+                                con esas caritas, para decirles que no :).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">San juan</h5>
+                            <small class="text-muted">08/26</small>
+                        </div>
+
+                        <img src="instagram foto feed/fogata-playa.jpg" class="card-img-top w-100" alt="fogata playa">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">987 likes</h6>
+                            <p class="card-text text-secondary">
+                                Como ya es tradición, durante la noche de San Juan, miles de personas de reunieron en
+                                las
+                                playas de diferentes
+                                localidades españolas para realizar el tradicional salto de fogatas donde miles de
+                                personas
+                                saltan sobre una
+                                hoguera mientas se pide un deseo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Iguana</h5>
+                            <small class="text-muted">12/25</small>
+                        </div>
+
+                        <img src="instagram foto feed/iguana.jpg" class="card-img-top w-100" alt="iguana">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">15331 likes</h6>
+                            <p class="card-text text-secondary">
+                                Espectacular foto de esta iguana buceando por las cristalinas aguas del mar caribe.
+                                Si sabes interpretar las señales que te da la naturaleza, seguramente llegarás muy
+                                lejos!!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Paisaje Lago</h5>
+                            <small class="text-muted">12/25</small>
+                        </div>
+
+                        <img src="instagram foto feed/paisaje-lago.jpg" class="card-img-top w-100" alt="paisaje lago">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">15331 likes</h6>
+                            <p class="card-text text-secondary">
+                                Así da gusto salir a dar paseos y la naturaleza se encarga que el recorrido sea de todo,
+                                menos aburrido.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Sol y sombra</h5>
+                            <small class="text-muted">12/25</small>
+                        </div>
+
+                        <img src="instagram foto feed/sol y sombra.jpg" class="card-img-top w-100" alt="sol y sombra">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">15331 likes</h6>
+                            <p class="card-text text-secondary">
+                                Maravilloso contraste!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Volcan Calbuco</h5>
+                            <small class="text-muted">12/25</small>
+                        </div>
+
+                        <img src="instagram foto feed/volcan-calbuco.jpg" class="card-img-top w-100"
+                            alt="volcan-calbuco">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">9586 likes</h6>
+                            <p class="card-text text-secondary">
+                                Que al salir del trabajo te encuentres con este espectaculo de la naturaleza no tiene
+                                precio!!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+        <!--  grid system-->
+        
+
+        <!--  post items -->
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Ballenas</h5>
+                            <small class="text-muted">08/26</small>
+                        </div>
+
+                        <img src="instagram foto feed/ballenas.jpg" class="card-img-top w-100" alt="ballenas">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">204 likes</h6>
+                            <p class="card-text text-secondary">
+                                Una ballena nadando con su cria recién nacida.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Casa de montaña</h5>
+                            <small class="text-muted">10/18</small>
+                        </div>
+
+                        <img src="instagram foto feed/casa-montaña.jpg" class="card-img-top w-100" alt="casa-montaña">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">181 likes</h6>
+                            <p class="card-text text-secondary">
+                                Espectacular lugar para pasar el finde en la montaña!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Edificio Colapsado</h5>
+                            <small class="text-muted">08/26</small>
+                        </div>
+
+                        <img src="instagram foto feed/edificio-colapsado.jpg" class="card-img-top w-100"
+                            alt="edificio-colapsado">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">1509 likes</h6>
+                            <p class="card-text text-secondary">
+                                Durante el terremoto de 8.8 grados Richter que sacudió la región de Mule y Bio Bio, en
+                                la
+                                ciduad de Concepción, el edificio
+                                Alto Rio, colapso por el movimiento de la tierra dejando a 8 personas fallecidas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Focas</h5>
+                            <small class="text-muted">10/19</small>
+                        </div>
+
+                        <img src="instagram foto feed/focas.jpg" class="card-img-top w-100" alt="familia de focas">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">181 likes</h6>
+                            <p class="card-text text-secondary">
+                                Durante el paseo del fin de semana me encontré este pequeño grupo de focas que pedían
+                                algo
+                                para desayunar...
+                                con esas caritas, para decirles que no :).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">San juan</h5>
+                            <small class="text-muted">08/26</small>
+                        </div>
+
+                        <img src="instagram foto feed/fogata-playa.jpg" class="card-img-top w-100" alt="fogata playa">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">987 likes</h6>
+                            <p class="card-text text-secondary">
+                                Como ya es tradición, durante la noche de San Juan, miles de personas de reunieron en
+                                las
+                                playas de diferentes
+                                localidades españolas para realizar el tradicional salto de fogatas donde miles de
+                                personas
+                                saltan sobre una
+                                hoguera mientas se pide un deseo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Iguana</h5>
+                            <small class="text-muted">12/25</small>
+                        </div>
+
+                        <img src="instagram foto feed/iguana.jpg" class="card-img-top w-100" alt="iguana">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">15331 likes</h6>
+                            <p class="card-text text-secondary">
+                                Espectacular foto de esta iguana buceando por las cristalinas aguas del mar caribe.
+                                Si sabes interpretar las señales que te da la naturaleza, seguramente llegarás muy
+                                lejos!!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Paisaje Lago</h5>
+                            <small class="text-muted">12/25</small>
+                        </div>
+
+                        <img src="instagram foto feed/paisaje-lago.jpg" class="card-img-top w-100" alt="paisaje lago">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">15331 likes</h6>
+                            <p class="card-text text-secondary">
+                                Así da gusto salir a dar paseos y la naturaleza se encarga que el recorrido sea de todo,
+                                menos aburrido.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Sol y sombra</h5>
+                            <small class="text-muted">12/25</small>
+                        </div>
+
+                        <img src="instagram foto feed/sol y sombra.jpg" class="card-img-top w-100" alt="sol y sombra">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">15331 likes</h6>
+                            <p class="card-text text-secondary">
+                                Maravilloso contraste!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 cod-lg-6">
+                    <div class="card shadow-sm mb-4 border-0">
+
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-white border-0 py-3">
+                            <h5 class="mn-0">Volcan Calbuco</h5>
+                            <small class="text-muted">12/25</small>
+                        </div>
+
+                        <img src="instagram foto feed/volcan-calbuco.jpg" class="card-img-top w-100"
+                            alt="volcan-calbuco">
+
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">9586 likes</h6>
+                            <p class="card-text text-secondary">
+                                Que al salir del trabajo te encuentres con este espectaculo de la naturaleza no tiene
+                                precio!!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Modal post-->
+        <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="newPostModal">Create a new post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="postCaption" class="form-label fw-bold">Caption:</label>
+                            <textarea class="form-control" id="postaCaption" rows="3" placeholder="" Add the caption of
+                                your post here></textarea>
+                        </div>
+
+                        <div class="mt-2">
+                            <a href="#" class="btn btn-sm me-2">
+                                <i class="bi bi-camera-fill fs-5"></i>
+                            </a>
+                            <a href="#" class="btn btn-sm">
+                                <i class="bi bi-geo-alt-fill fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="ruta/a/bootstrap.bundle.min.js"></script>
+
+        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
